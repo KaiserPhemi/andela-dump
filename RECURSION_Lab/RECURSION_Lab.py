@@ -79,7 +79,7 @@ def replicate_iter(times, data):
 			for i in range(1, times+1):
 				result.append(data)
 		return result
-		
+		raise ValueError()
 	except (TypeError, AttributeError):
 		raise ValueError()
 
@@ -89,7 +89,7 @@ def replicate_recur(times, data):
 			return []
 		else:
 			return [data] + replicate_recur(times-1, data)
-		raise ValueError('This is manually raised ValueError')
+		raise ValueError()
 		
 	except (TypeError, AttributeError):
 		raise ValueError()
